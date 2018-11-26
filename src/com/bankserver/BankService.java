@@ -25,6 +25,10 @@ from a socket.
 */
 public class BankService implements Runnable{
 
+
+	public static String SERVER = "127.0.0.1";
+	public static int PORT = 1230;
+
     private Socket s;
 	private Scanner in;
 	private PrintWriter out;
@@ -268,7 +272,7 @@ public class BankService implements Runnable{
 
 					Socket otherSocket;
 
-					otherSocket = new Socket("localhost", bank.getPort());
+					otherSocket = new Socket(BankService.SERVER, bank.getPort());
 
 					InputStream instream2 = otherSocket.getInputStream();
 					OutputStream outstream2 = otherSocket.getOutputStream();

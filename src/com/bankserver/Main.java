@@ -2,8 +2,8 @@ package com.bankserver;
 
 public class Main {
 
-    static final int BANK1_PORT = 1230;
-    static final int BANK2_PORT = 1231;
+    static final int BANK1_PORT = BankService.PORT;
+    static final int BANK2_PORT = BANK1_PORT + 1;
 
     public static void main(String args[]) {
 
